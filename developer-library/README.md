@@ -6,15 +6,16 @@ Oracle provides an open, modern, easy and intelligent platform and infrastructur
 Click on one of our workshops below to access the content.
 
 ## Microservices Workshops
-Coming Soon
+- [Building Microservices with Oracle's Converged Database](https://oracle.github.io/learning-library/developer-library/microservices-with-converged-db)
+
 
 ## Database 19c for Developer Workshops
 
-- [Database Features for Developers - Full Workshop](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/freetier/) 
-- [Hybrid Partitioning](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/hybridpart-freetier) 
-- [JSON](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/json-freetier) 
-- [Automatic Indexing](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/autoindex-freetier) 
-- [Python](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/python-freetier) 
+- [Database Features for Developers - Full Workshop](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/freetier/index.html) 
+- [Hybrid Partitioning](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/hybridpart-freetier/index.html) 
+- [JSON](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/json-freetier/index.html) 
+- [Automatic Indexing](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/autoindex-freetier/index.html) 
+- [Python](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/python-freetier/index.html) 
 
 ## APEX Workshops
 

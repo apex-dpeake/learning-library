@@ -32,7 +32,7 @@ As an application developer,
 
 ![](./images/pythonApp/Compute1.png " ")
 
-- Select the right Oracle Developer Cloud image you created in [Lab 4](?lab=lab-4-configure-development-system-for-use) 
+- Select the right Oracle Developer Cloud image you created in [Lab 4](?lab=lab-4-configure-development-system-for-use)
 
 - Copy the public IP address of the instance in a note pad. 
 
@@ -65,16 +65,15 @@ In your developer client ssh session,
 
 Lets download a sample python application for the purpose of this lab,
 
-```
-<copy>wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/data-management-library/exacs/scripts/pythonApp/EXACSpython.zip?raw=true</copy>
-```
 
+```
+<copy>wget -O EXACSPython.zip https://objectstorage.us-ashburn-1.oraclecloud.com/p/qvAWQt4VJBTU25lXtqKk3MzmRZ4vE-XJli9g0MhgWfQ/n/orasenatdpltintegration02/b/ExaCSScripts/o/EXACSPython.zip</copy>
+```
 - Unzip the application 
 
 ```
 <copy>unzip EXACSPython.zip</copy>
 ```
-
 
 ### STEP 2: Run your python application**
 

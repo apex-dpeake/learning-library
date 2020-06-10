@@ -37,9 +37,11 @@ provider "oci" {
 }
 
 # Token expired at Sat, Apr 10, 2021, 23:38:00 UTC, get new an OSS autho token and documented here
+/*
 terraform {
   backend "http" {
     update_method = "PUT"
    address       = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/eCgGCyZF-A2Zp5OLRQcOrwQB0U-nMpaDRl6TX-lDx0U/n/orasenatdpltintegration02/b/exacsTfStates/o/terraform.tfstate"
   }
 }
+*/

@@ -18,7 +18,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Tasks:
 
-### **Task 1. Sing up an account on GitHub**
+### **Task 1. Sign up for an account on GitHub**
 
 Point your browser to https://github.com/ and select “Sign up” button on the right top of the page.
 It is completely free to create and use a GitHub account. All you need

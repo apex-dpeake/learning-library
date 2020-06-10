@@ -1,17 +1,25 @@
 ![](img/db-options-title.png)  
 
-# SSWorkshop: In-Memory Fundamentals
+# LiveLabs: In-Memory Fundamentals
 ## Table of Contents 
-- [Introduction](#introduction)
-- [Lab Assumptions](#lab-assumptions)
-- [Section 1-Login to the Oracle Cloud](#section-1-login-to-the-oracle-cloud)
-- [Section 2-Generate an SSH key pair](#section-2-generate-an-ssh-key-pair)
-- [Section 3-Login and Create Stack using Resource Manager](#section-3-login-and-create-stack-using-resource-manager)
-- [Section 4-Terraform Plan and Apply](#section-4-terraform-plan-and-apply)
-- [Section 5a-Connect to your instance](#section-5a-connect-to-your-instance)
-- [Section 5b-Download the Lab Files](#section-5b-download-the-lab-files)
-- [Section 5c-Run the DB19c Scripts](#section-5c-run-the-db19c-scripts)
-- [Section 5d-Run the In Memory Scripts](#section-5d-run-the-in-memory-scripts)
+- [LiveLabs: In-Memory Fundamentals](#livelabs-in-memory-fundamentals)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Lab Assumptions](#lab-assumptions)
+  - [Lab Settings](#lab-settings)
+  - [Section 1-Login to the Oracle Cloud](#section-1-login-to-the-oracle-cloud)
+  - [Section 2-Generate an SSH Key Pair](#section-2-generate-an-ssh-key-pair)
+    - [For MAC Users ###](#for-mac-users)
+    - [For Windows: Using GitBash or Windows Subsystem for Linux (WSL) ###](#for-windows-using-gitbash-or-windows-subsystem-for-linux-wsl)
+    - [For Windows: Using PuttyGen ###](#for-windows-using-puttygen)
+  - [Section 3-Login and Create Stack using Resource Manager](#section-3-login-and-create-stack-using-resource-manager)
+  - [Section 4-Terraform Plan and Apply](#section-4-terraform-plan-and-apply)
+  - [Section 5a-Connect to your instance](#section-5a-connect-to-your-instance)
+    - [Connecting via MAC or Windows CYGWIN Emulator](#connecting-via-mac-or-windows-cygwin-emulator)
+    - [Connecting via Windows](#connecting-via-windows)
+  - [Section 5b-Download the Lab Files](#section-5b-download-the-lab-files)
+  - [Section 5c-Run the DB19c Scripts](#section-5c-run-the-db19c-scripts)
+  - [Section 5d-Run the In Memory Scripts](#section-5d-run-the-in-memory-scripts)
 
 
 
@@ -22,7 +30,7 @@ This lab will show you how to login to the cloud and setup your environment usin
 
 
 ## Lab Assumptions
-- Each participant has been sent two emails, one from Oracle Cloud  with their username and another with the subject SSWorkshop, this contains their temporary password.
+- Each participant has been sent two emails, one from Oracle Cloud  with their username and another with the subject LiveLabs, this contains their temporary password.
 
 
 ## Lab Settings

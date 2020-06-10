@@ -1,8 +1,8 @@
 ![](img/db-options-title.png)  
 
-# SSWorkshop: Docker Lab
+# LiveLabs: Docker Lab
 ## Table of Contents 
-- [SSWorkshop: Docker Lab](#ssworkshop-docker-lab)
+- [LiveLabs: Docker Lab](#livelabs-docker-lab)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Lab Assumptions](#lab-assumptions)
@@ -27,7 +27,7 @@ This lab will show you how to login to the cloud and setup your environment usin
 
 
 ## Lab Assumptions
-- Each participant has been sent two emails, one from Oracle Cloud  with their username and another with the subject SSWorkshop, this contains their temporary password.
+- Each participant has been sent two emails, one from Oracle Cloud  with their username and another with the subject LiveLabs, this contains their temporary password.
 
 
 ## Lab Settings
@@ -161,10 +161,10 @@ You will be using Terraform to create your database environment.
     
     - **Display Name:** Enter your firstname and lastname and the day you were born (do not enter any special characters here, including periods, it may mess up the configuration)
 
-    **Enter Info from your SSWorkshop Email**
-    - **Instance Image OCID**: Enter the Image ID you received in your SSWorkshop email
+    **Enter Info from your LiveLabs Email**
+    - **Instance Image OCID**: Enter the Image ID you received in your LiveLabs email
 
-    - **Public Subnet ID**:  Enter the Subnet ID you received in your SSWorkshop email
+    - **Public Subnet ID**:  Enter the Subnet ID you received in your LiveLabs email
 
     - **AD**: Enter 1, 2, or 3 based on your last name.  (A-J -> 1, K - M -> 2, N-Z -> 3)
     

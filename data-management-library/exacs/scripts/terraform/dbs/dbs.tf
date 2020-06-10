@@ -17,6 +17,7 @@ resource "oci_database_database" "test_database" {
   //It takes about 40 min to create 1 DB so make it simple to give an hour per DB
   timeouts {
       create = "${var.db_count}h"
+      delete = "${var.db_count}h"
  }
 
   db_home_id = oci_database_db_home.tf_db_home.id

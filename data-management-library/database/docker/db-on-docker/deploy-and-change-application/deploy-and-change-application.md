@@ -27,6 +27,11 @@ In this section of the lab you will deploy the remaining containers to support t
 
 In this section, you will deploy an application, twitterfeed, that is stored in the hub.docker.com site under the account wvbirder.  You will then run the rest client using an oracle database as the data source.
 
+0. Login to the instance using ssh
+
+    ````
+    ssh -i yourkeyname opc@ your ip address
+    ````
 1.  Make sure you have exited out of the docker container.  Download the docker image, twitterfeed, extract it and run the container.  The download is from the wvbirder docker hub account where this application is staged.
     ````
     <copy>

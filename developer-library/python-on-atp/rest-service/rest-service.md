@@ -106,15 +106,15 @@ In Lab 2 you also continue to play the role of Derek, but now you get to the fun
   ![](images/5.png " ")
 
 12. Next enter command to create entry point.
-  `  ```
-    <copy>virtualenv env</copy>
-    ``` 
+  ```
+  <copy>virtualenv env</copy>
+  ```
 
-    ![](images/6.png " ")`
+  ![](images/6.png " ")
 
 13. To run the virtual enviornment type the following. If successfull you will see (env) before the path that means you are now in virtual env.
   ```
-  <copy>`$ source env/bin/activate</copy>
+  <copy>source env/bin/activate</copy>
   ```
 
   ![](images/7.png " ")

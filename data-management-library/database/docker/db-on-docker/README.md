@@ -11,4 +11,4 @@ Docker is an open source container designed to separate an application from its 
 
 ### Access the Labs Using Our Web Interface
 **Click the image to use our easy to navigate HTML format:**
-[![Oracle Database Docker Workshop](images/db-on-docker.png " ")](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker)
+[![Oracle Database Docker Workshop](images/db-on-docker.png " ")](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker/freetier)

@@ -22,7 +22,7 @@ This lab will walk you through a few basic commands used in docker.  Here's a li
 ### Lab Prerequisites?
 
 * Chrome Browser (preferred)
-* Install JSON Extension [click here]()
+* Install JSON Extension on Chrome Browser [click here](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
 * Participant has completed the following labs:
     - Login to Cloud/Register for Free Tier
     - Create SSH Keys 
@@ -34,22 +34,7 @@ This lab will walk you through a few basic commands used in docker.  Here's a li
 1. Using the terminal of your choice (we recommend the Oracle Cloud Shell) login to the instance you created using secure shell (ssh)
 
     ````
-    <copy>
-    ssh -i optionskey opc@ </copy>your ip address
-   
-    ````
-
-1.  OPTIONAL:  If you are running this on a compute instance that has Oracle already installed, you may need to shut down the listener.  If you do not have a listener running, proceed to the next step.
-
-    ````
-    <copy>
-    sudo su - oracle
-    ps -ef | grep tns
-    lsnrctl status LISTENER
-    lsnrctl stop LISTENER
-    ps -ef | grep tns
-    exit
-    </copy>
+    ssh -i yourkeyname opc@ your ip address
     ````
 
 2. You will use yum (a package management tool for Linux) to install the Docker engine, enable it to start on re-boot, grant docker privledges to the opc user and finally install GIT.  When prompted, press *Y* to download.  All of these steps will be performed as the root user.

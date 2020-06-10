@@ -1,22 +1,22 @@
 # Build the Oracle Database Docker Image
 ## Before You Begin
 
-This lab walks you through the steps to build an Oracle Database Docker image on an Oracle Cloud Compute instance.
+This lab walks you through the steps to build an Oracle Database Docker image on an Oracle Cloud compute instance.
 
 ### Background
 A Docker image contains all of the necessary code to execute an application for a host kernel. In this lab, you will create a Docker image for Oracle Database 19c.
 
 ### What Do You Need?
 
-* An Oracle Cloud paid account or free trial. To sign up for a trial account with $300 in credits for 30 days, click [here](http://oracle.com/cloud/free).
+* An Oracle Cloud paid account or free trial. To sign up for a trial account with $300 in credits for 30 days, click [here](http://oracle.com/cloud/free)
 * SSH keys
-* Docker installed on an Oracle Cloud Compute instance.
+* Docker installed on an Oracle Cloud compute instance.
 
 ## **STEP 1**: Install Docker build files from GitHub
 
-Oracle has provided a complete set of Docker build files on an Oracle GitHub repo. There are several ways to get the files to the compute instance, but for simplicity, you will use GitHub's download option.
+Oracle has provided a complete set of Docker build files on an Oracle GitHub repository. There are several ways to get the files to the compute instance, but for simplicity, you will use GitHub's download option.
 
-1. If you don't have an open SSH connection to your compute instance, open and terminal window and connect using the public IP address of your compute instance:
+1. If you don't have an open SSH connection to your compute instance, open a Terminal window and connect using the public IP address of your compute instance:
 
     ```
     $ <copy>ssh -i ./myOracleCloudKey opc@</copy>123.123.123.123
@@ -24,7 +24,7 @@ Oracle has provided a complete set of Docker build files on an Oracle GitHub rep
     [opc@oraclelinux77 ~]$
     ```
 
-2. Use the `wget` to download the repo on the compute instance:
+2. Use the `wget` to download the repository on the compute instance:
 
     ```
       [opc@oraclelinux77 ~]$ <copy>wget https://github.com/oracle/docker-images/archive/master.zip</copy>
@@ -46,7 +46,7 @@ Oracle has provided a complete set of Docker build files on an Oracle GitHub rep
 
     [opc@oraclelinux77 ~]$
     ```
-3. Unzip the repo on your compute instance:
+3. Unzip the repository on your compute instance:
 
     ```
     [opc@oraclelinux77 ~]$ <copy>unzip master.zip</copy>

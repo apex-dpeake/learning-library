@@ -37,7 +37,7 @@ In a similar fashion to how you modified the To Dos report, you need to update t
        ROW_VERSION,
        URL,
        NAME,
-       DESCIPTION,
+       DESCRIPTION,
        CREATED,
        CREATED_BY,
        UPDATED,

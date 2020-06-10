@@ -24,11 +24,11 @@ Lab 1 - 5 deals with setting up the infrastructure and connectivity to Exadata C
 
 Labs 6 & 7 are geared towards Monitoring and Managing your Exadata Cloud Service databases.
 
-Labs 8 - 11  are intended for Backup, Recovering and Migrating your databases.
+Labs 8 - 10 are intended for Backup, Recovering and Migrating your databases.
 
-Lab 12 - 14 onwards demonstrate advanced lab guides for Database Vault, Key Management using Oracle Key Vault and advanced Data safe lab guides.
+Lab 11 - 12 onwards demonstrate advanced lab guides for Database Vault and advanced Data safe lab guides.
 
-Lab 15 - 19 are additional labs which talks about connecting your Exadata Cloud Service databases with Python application, working with OCI CLI, build APEX applications and automating with Terraform.
+Lab 13 - 16 are additional labs which talks about connecting your Exadata Cloud Service databases with Python application, working with OCI CLI, build APEX applications and automating with Terraform.
 
 ## Goals for this workshop
 1. Prepare your private network in the Oracle Cloud Infrastructure
@@ -40,14 +40,15 @@ Lab 15 - 19 are additional labs which talks about connecting your Exadata Cloud 
 7. Data Safe with Exadata Cloud Service
 8. Migrate an on-prem application schema using Data Pump
 9. Real time migration of database using Oracle Goldengate Replication
-10. Backup and Recovery using Console, RMAN and API's
+10. Backup and Recovery using Console and API's
 11. Protect your data with Database Vault
-12. Key Management using Oracle Key Vault
-13. Data Safe Advanced lab
-14. Use OCI CLI commands to work with Exadata Cloud Service
-15. Automation with Terraform
-16. Build and deploy Python application stacks on Exadata Cloud Service
-17. Build APEX application on Exadata Cloud Service
+12. Data Safe Advanced lab
+13. Use OCI CLI commands to work with Exadata Cloud Service
+14. Automation with Terraform
+15. Build and deploy Python application stacks on Exadata Cloud Service
+16. Build APEX application on Exadata Cloud Service
+17. Install and configure Swingbench to simulate a transaction processing workload
+18. build a docker container running node.js connected to EXACS database
 
 
 # Workshop Overview
@@ -123,7 +124,6 @@ As a System admin,
 - Install and configure Enterprise Manager on OCI
 - Configure Enterprise Manager with Exadata Cloud Service
 
-
 ## Lab 7: Data Safe with Exadata Cloud Service
 
 **Key Objectives**:
@@ -132,6 +132,7 @@ As an database admin,
 - Assess the security of a database by using the Security Assessment feature in Oracle Data Safe
 - Assess user security in your target database by using the User Assessment feature in Oracle Data Safe.
 - Fix some of the security issues based on the assessment findings
+- Discover sensitive data in database
 
 
 
@@ -176,16 +177,7 @@ As a database security admin,
 
 
 
-## Lab 12: Key Management using Oracle Key Vault
-
-**Key Objectives**:
-
-As a database admin or user,
-
-- Manage your database encryption keys using Oracle Key Vault
-
-
-## Lab 13: Data Safe Advanced lab
+## Lab 12: Data Safe Advanced lab
 
 **Key Objectives**:
 
@@ -194,8 +186,7 @@ As a database security admin,
 - Configure Data Masking and Auditing and Reporting for Exadata Cloud Service database
 
 
-
-## Lab 14: Use OCI CLI commands to work with Exadata Cloud Service
+## Lab 13: Use OCI CLI commands to work with Exadata Cloud Service
 
 
 **Key Objectives**:
@@ -206,7 +197,7 @@ As a application developer, DBA or DevOps user,
 
 
 
-## Lab 15: Automation with Terraform
+## Lab 14: Automation with Terraform
 
 
 **Key Objectives**:
@@ -217,7 +208,7 @@ As a database or System admin,
 
 
 
-## Lab 16: Build and deploy Python application stacks on Exadata Cloud Service
+## Lab 15: Build and deploy Python application stacks on Exadata Cloud Service
 
 
 **Key Objectives**:
@@ -227,7 +218,7 @@ As an application developer,
 - Learn how to deploy a python application and connect it your Exadata Cloud Service database instance
 
 
-## Lab 17: - Build APEX application on Exadata Cloud Service
+## Lab 16: - Build APEX application on Exadata Cloud Service
 
 
 **Key Objectives**:
@@ -237,6 +228,26 @@ As an application developer, DBA or DevOps user,
 - Access OCI autonomous database console and get URL for apex web console
 - Create a VNC connection to developer client VM and access apex on your database
 - Setup additional apex developer users
+
+## Lab 17: - Introduction to Swingbench and Oracle database
+
+
+**Key Objectives**:
+
+As an application developer, DBA or DevOps user,
+
+- Install and configure Swingbench to simulate a transaction processing workload
+- Configure Exadata Cloud Service Database with Swingbench
+
+## Lab 18: - Docker Application with EXACS
+
+**Key Objectives**:
+
+As an application developer, DBA or DevOps user,
+
+- To build a docker container running node.js
+- Connect it to an Exadata Cloud Service running in the Oracle cloud
+- Deploy the docker container on Oracle Compute Instance
 
 
 

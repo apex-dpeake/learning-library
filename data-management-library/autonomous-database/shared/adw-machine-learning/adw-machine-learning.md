@@ -1,11 +1,8 @@
-
-<!-- Updated March, 2020 -->
-
-# Bonus Lab 11: Simple Introduction to Machine Learning Algorithms (DBMS\_PREDICTIVE\_ANALYTICS)
+# Bonus Lab: Simple Introduction to Machine Learning Algorithms (DBMS\_PREDICTIVE\_ANALYTICS)
 
 ## Introduction
 
-During this lab you will be using the Oracle Machine Learning (OML) notebook application provided with ADWC to explore some samples of the DBMS\_PREDICTIVE\_ANALYTICS functionality. DBMS\_PREDICTIVE\_ANALYTICS provides a set of easy-to-use machine learning procedures to simplify the machine learning process.
+During this bonus lab you will be using the Oracle Machine Learning (OML) notebook application provided with ADWC to explore some samples of the DBMS\_PREDICTIVE\_ANALYTICS functionality. DBMS\_PREDICTIVE\_ANALYTICS provides a set of easy-to-use machine learning procedures to simplify the machine learning process.
 
 ### Objectives
 
@@ -84,10 +81,14 @@ The first step is to download the sample notebook and then import it into the Or
 - Review the Oracle Database Data Mining documentation: [https://docs.oracle.com/en/database/oracle/oracle-database/18/dmapi/introduction-to-oracle-data-mining.html](https://docs.oracle.com/en/database/oracle/oracle-database/18/dmapi/introduction-to-oracle-data-mining.html)
 - Look at the DBMS\_DATA\_MINING sample notebooks in the Oracle ML Notebook Gallery
 
+## Want to Learn More?
+
+Click [here](https://docs.oracle.com/en/database/oracle/oracle-database/20/dmapi/oml4sql-basics.html#GUID-BFA7FAAE-F5CB-4A42-886A-47B6D502B492) for documentation on Oracle Machine Learning algorithms.
+
 ## Acknowledgements
 
 - **Author** - Nilay Panchal, ADB Product Management
 - **Adapted for Cloud by** - Richard Green, Principal Developer, Database User Assistance
 - **Last Updated By/Date** - Richard Green, March 2020
 
-See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request. 
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.

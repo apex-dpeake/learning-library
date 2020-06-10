@@ -75,17 +75,13 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 <img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/Grafana/img/Grafana_015.PNG" alt="image-alt-text">
 
-2. From the OCI Services menu,Click **Virtual Cloud Network**. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Networking QuickStart**
-
-<img src="https://raw.githubusercontent.com/oracle/learning-library/master/oci-library/qloudable/OCI_Quick_Start/img/RESERVEDIP_HOL001.PNG" alt="image-alt-text">
-
+2. From the OCI Services menu,Click **Virtual Cloud Networks** under Networking. Select the compartment assigned to you from drop down menu on left part of the screen under Networking and Click **Start VCN Wizard**
 
 **NOTE:** Ensure the correct Compartment is selected under COMPARTMENT list
 
 3. Click **VCN with Internet Connectivity** and click **Start Workflow**
 
 4. Fill out the dialog box:
-
 
 - **VCN NAME**: Provide a name
 - **COMPARTMENT**: Ensure your compartment is selected
@@ -102,7 +98,6 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 7. Click **View Virtual Cloud Network** to display your VCN details.
              
-
 ## Create Load Balancer and update Security List
 
 **When you create a load balancer, you choose its shape (size) and specify subnets from different Availability Domains. This ensures that the load balancer is highly available.**
@@ -113,14 +108,11 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 **Under Add Details**
 
-
 - **LOAD BALANCER NAME**: Enter a name for your load balancer.
 - **CHOOSE VISIBILITY TYPE**: Public
 - **CHOOSE THE MAXIMUM TOTAL BANDWIDTH**: Select **SMALL** 100Mbps. (This specifies the bandwidth of the load balancer.)
 
-
 **NOTE:** Shape cannot be changed later.
-
 
 - **VIRTUAL CLOUD NETWORK**: Choose your Virtual Cloud Network
 - **SUBNET**: Choose the **Public Subnet**
@@ -131,15 +123,12 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 **Under Choose Backends:**
 
-
 - **SPECIFY A LOAD BALANCING POLICY**: Weighted Round Robin
 - **Add Backends**: Don't add any backend. This will be managed by the instance pool. 
 
 <img src="https://raw.githubusercontent.com/umairs123/learning-library/master/oci-library/qloudable/OCI_Fundamentals_Lab/img/OCI_Fundamentals_007.PNG" alt="image-alt-text">
 
-
 ***Under SPECIFY HEALTH CHECK POLICY***
-
 
 - **PROTOCOL**: HTTP
 - **Port**: 80 
@@ -156,7 +145,6 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 
 ***Leave other options as default***
 
-
 3. Click **Create Load Balancer** 
 
 4. Wait for the load balancer to become active and then note down it’s Public IP address.
@@ -170,18 +158,13 @@ A cooldown period between autoscaling events lets the system stabilize at the up
 8. Click **Default Security List**, Click **Add Ingress Rule**.
 Enter the following ingress rule; Ensure to leave STATELESS flag un-checked
 
-
-
 - Source Type: CIDR 
 - Source CIDR: Enter 0.0.0.0/0.
 - IP Protocol: Select TCP.
 - Source Port Range: All.
 - Destination Port Range: Enter 80 (the listener port).
 
-
 9. Click **Add Ingress Rule**. 
-
-
 
 ## Configure instance pool and auto scaling
 
@@ -309,7 +292,6 @@ Fill out the dialog box:
 - **NUMBER OF INSTANCES**: 0 
 
 (This is the number of computes that should be launched when the pool is created. We will start with no compute)
-
 
 - **INSTANCE CONFIGURATION COMPARTMENT** : Provide your compartment
 

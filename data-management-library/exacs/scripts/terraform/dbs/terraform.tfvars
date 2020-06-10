@@ -8,4 +8,4 @@ compartment_ocid="ocid1.compartment.oc1..aaaaaaaaejlcwje5fsnfyrwt6btsyeuftfbx6bk
 # HubExaCS in the above Compartment
 dbsysid = "ocid1.dbsystem.oc1.iad.abuwcljtgtdbuh4xs2r4gfedt6rhhazezin4v32am5lysqzxlvmnzrwrnqka"
 # Number of database to create with the same Oracle home
-db_count=3
+db_count=2

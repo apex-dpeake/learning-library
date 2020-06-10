@@ -59,12 +59,10 @@ This lab assumes you have already completed the following labs:
     Enter the following information:
 
     **Choose a Name for your Instance:** Enter a display name. This will be the display name for the compute instance you create.  We recommend your name and a set of numbers
-    
-    **Image Cloud ID:** The image cloud OCI ID for various regions are listed below. This is the unique identifer of the Oracle Linux image you will use to build your instance.  These IDs are different cross region so make sure you find your corresponding ID for your region.  If you do not see your region, click [here](https://docs.cloud.oracle.com/en-us/iaas/images/image/54f930a3-0bf3-4f5d-b573-10eeeb7c7b03/) to access the full list.  *All regions are NOT displayed below*
 
     **SSH Public Key**:  Paste the public key you created in the earlier lab *(Note: If you used the Oracle Cloud Shell to create your key, make sure you paste the pub file in a notepad, remove any hard returns.  The file should be one line or you will not be able to login to your compute instance)*
 
-    Image ID: ocid1.image.oc1..aaaaaaaa2es7kqqgmmjyymzdaaeqmmehrprg6gdjxs4on5lpzwiv64przksa
+    **Image ID**: The image cloud OCI ID is the unique identifier for the Oracle Cloud Developer Image you will use to build your instance.  Enter the string in the box.  ID:  ocid1.image.oc1..aaaaaaaa2es7kqqgmmjyymzdaaeqmmehrprg6gdjxs4on5lpzwiv64przksa
 
 6. Click **Next**.
 

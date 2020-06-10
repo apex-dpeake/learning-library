@@ -17,7 +17,6 @@ Each of the labs are 5 -10 minutes in length, so you'll be up and running in no 
 
 *Note: You will need a Free Trial or Paid account for this workshop (not Always Free services)*
 
-
 ### **Let's Get Started!**
 
 - Click on **[Sign Up for a Free Trial](?lab=sign-up-for-free-trial)** from the menu on the right. If you already have an Oracle Cloud account, click on **[Create SSH Keys](?lab=create-ssh-keys)**.

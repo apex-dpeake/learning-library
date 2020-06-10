@@ -34,7 +34,7 @@ To deploy these services, you will be using Terraform, a tool for building, chan
 
 This will create your cloud resources (VCN, Compute Image, Autonomous Transaction Processing Instance, among other things).
 
-1. Download the terraform zip file [here](./files/python4atp-tf.zip).  Then unzip it.
+1. Download the terraform zip file [here](https://objectstorage.us-ashburn-1.oraclecloud.com/n/natdcshjumpstartprod/b/python4atp/o/python4atp-tf.zip).  Then unzip it.
 
 2. Now create a private key (id\_rsa) and a public key (id\_rsa.pub). The public key is used when you are prompted for a SSH key when you create services, and the matching private key is used to access those services after creation. (eg: Cloud Developer Image).  Enter this in a command shell or terminal window. 
   ````
@@ -54,7 +54,7 @@ This will create your cloud resources (VCN, Compute Image, Autonomous Transactio
 
   ![](images/009.png " ")
 
-## STEP 2: Create a Resource Manager Stack
+## STEP 3: Create a Resource Manager Stack
 
 Terraform provides a reusable process for creating infrastructure.  In some cases, like this one, you don't have to know anything about how the process works. You can deploy different pre-designed infrastructure designs for many different purposes, which frees up users to focus on their projects.
 
@@ -86,7 +86,7 @@ Terraform provides a reusable process for creating infrastructure.  In some case
 
   ![](images/015.png " ")
 
-## STEP 3: Create OCI Resources in Resource Manager
+## STEP 4: Create OCI Resources in Resource Manager
 
 1. Now inside of the resource manager, hover over **Terraform Actions** and click on **Plan**.
 
@@ -108,7 +108,7 @@ Terraform provides a reusable process for creating infrastructure.  In some case
 
   ![](images/020.png " ")
 
-## STEP 4: Prepare to Load Data
+## STEP 5: Prepare to Load Data
 
 1. Generate an Auth Token.  Navigate to **Identity** > **Users**.  
 
@@ -128,7 +128,7 @@ Terraform provides a reusable process for creating infrastructure.  In some case
 
   ![](images/025.png " ")
 
-5. [Download the database export file](./files/expdp_alpha.dmp).
+5. [Download the database export file](https://objectstorage.us-ashburn-1.oraclecloud.com/n/natdcshjumpstartprod/b/python4atp/o/expdp_alpha.dmp).
 
 6. Go back to the console, and click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Core Infrastructure** section, select **Object Storage** then **Object Storage** .
 
@@ -156,7 +156,7 @@ Terraform provides a reusable process for creating infrastructure.  In some case
 
   ![](images/032.png " ")
 
-## STEP 5: Log into SQL Developer and Load Data into userid Alpha.
+## STEP 6: Log into SQL Developer and Load Data into userid Alpha.
 
 1. Click the **Menu icon** in the upper left corner to open the navigation menu. Under the **Database** section, select **Autonomous Transaction Processing**.
 
@@ -204,50 +204,50 @@ Terraform provides a reusable process for creating infrastructure.  In some case
 
   ![](images/040.png " ")
 
-9. Import the data.  Paste this into your worksheet window.  The ONLY THING you need to change is the object storage file location.  
+9. Import the data.  Paste this into your worksheet window.   
   ```
-  <copy>
-  set scan off
-  set serveroutput on
-  set escape off
-  DECLARE
-      s varchar2(1000); 
-      h1 number;
-      errorvarchar varchar2(100):= 'ERROR';
-      tryGetStatus number := 0;
-  begin
-      h1 := dbms_datapump.open (operation => 'IMPORT', job_mode => 'SCHEMA', job_name => 'IMPALPHA', version => 'COMPATIBLE'); 
-      tryGetStatus := 1;
-      dbms_datapump.set_parameter(h1, 'TRACE', 167144-96) ; 
-      dbms_datapump.metadata_transform(h1, 'DWCS_CVT_IOTS', 1); 
-      dbms_datapump.metadata_transform(h1, 'DWCS_CVT_CONSTRAINTS', 1); 
-      dbms_datapump.metadata_filter(h1, 'EXCLUDE_PATH_EXPR',         'IN ( ''CLUSTER'', ''CLUSTERING'', ''DB_LINK'' )'); 
-      dbms_datapump.set_parallel(handle => h1, degree => 1); 
-      dbms_datapump.add_file(handle => h1, filename => 'IMPORT-'||to_char(sysdate,'hh24_mi_ss')||'.LOG', directory => 'DATA_PUMP_DIR', filetype=>DBMS_DATAPUMP.KU$_FILE_TYPE_LOG_FILE); 
-      dbms_datapump.set_parameter(handle => h1, name => 'KEEP_MASTER', value => 1); 
-      dbms_datapump.metadata_filter(handle => h1, name => 'SCHEMA_EXPR', value => 'IN(''ALPHA'')'); 
-  -----------------------------------------------------
-      dbms_datapump.add_file(handle => h1, filename => '&lt;object storage file location&gt;', directory => 'PY4DEV_TOKEN', filetype =&gt; 5);
-  -----------------------------------------------------
-      dbms_datapump.set_parameter(handle => h1, name => 'INCLUDE_METADATA', value => 1); 
-      dbms_datapump.set_parameter(handle => h1, name => 'DATA_ACCESS_METHOD', value => 'AUTOMATIC'); 
-      dbms_datapump.set_parameter(handle => h1, name => 'SKIP_UNUSABLE_INDEXES', value => 0);
-      dbms_datapump.start_job(handle => h1, skip_current => 0, abort_step => 0); 
-      dbms_datapump.detach(handle => h1); 
-      errorvarchar := 'NO_ERROR'; 
-  EXCEPTION
-      WHEN OTHERS THEN
-      BEGIN 
-          IF ((errorvarchar = 'ERROR')AND(tryGetStatus=1)) THEN 
-              DBMS_DATAPUMP.DETACH(h1);
-          END IF;
-      EXCEPTION 
-      WHEN OTHERS THEN 
-          NULL;
-      END;
-      RAISE;
-  END;
-  /</copy>
+<copy>
+set scan off
+set serveroutput on
+set escape off
+DECLARE
+    s varchar2(1000); 
+    h1 number;
+    errorvarchar varchar2(100):= 'ERROR';
+    tryGetStatus number := 0;
+begin
+    h1 := dbms_datapump.open (operation => 'IMPORT', job_mode => 'SCHEMA', job_name => 'IMPALPHA', version => 'COMPATIBLE'); 
+    tryGetStatus := 1;
+    dbms_datapump.set_parameter(h1, 'TRACE', 167144-96) ; 
+    dbms_datapump.metadata_transform(h1, 'DWCS_CVT_IOTS', 1); 
+    dbms_datapump.metadata_transform(h1, 'DWCS_CVT_CONSTRAINTS', 1); 
+    dbms_datapump.metadata_filter(h1, 'EXCLUDE_PATH_EXPR',         'IN ( ''CLUSTER'', ''CLUSTERING'', ''DB_LINK'' )'); 
+    dbms_datapump.set_parallel(handle => h1, degree => 1); 
+    dbms_datapump.add_file(handle => h1, filename => 'IMPORT-'||to_char(sysdate,'hh24_mi_ss')||'.LOG', directory => 'DATA_PUMP_DIR', filetype=>DBMS_DATAPUMP.KU$_FILE_TYPE_LOG_FILE); 
+    dbms_datapump.set_parameter(handle => h1, name => 'KEEP_MASTER', value => 1); 
+    dbms_datapump.metadata_filter(handle => h1, name => 'SCHEMA_EXPR', value => 'IN(''ALPHA'')'); 
+-----------------------------------------------------
+    dbms_datapump.add_file(handle => h1, filename => '&lt;object storage file location&gt;', directory => 'PY4DEV_TOKEN', filetype => 5);
+-----------------------------------------------------
+    dbms_datapump.set_parameter(handle => h1, name => 'INCLUDE_METADATA', value => 1); 
+    dbms_datapump.set_parameter(handle => h1, name => 'DATA_ACCESS_METHOD', value => 'AUTOMATIC'); 
+    dbms_datapump.set_parameter(handle => h1, name => 'SKIP_UNUSABLE_INDEXES', value => 0);
+    dbms_datapump.start_job(handle => h1, skip_current => 0, abort_step => 0); 
+    dbms_datapump.detach(handle => h1); 
+    errorvarchar := 'NO_ERROR'; 
+EXCEPTION
+    WHEN OTHERS THEN
+    BEGIN 
+        IF ((errorvarchar = 'ERROR')AND(tryGetStatus=1)) THEN 
+            DBMS_DATAPUMP.DETACH(h1);
+        END IF;
+    EXCEPTION 
+    WHEN OTHERS THEN 
+        NULL;
+    END;
+    RAISE;
+END;
+/</copy>
   ```
 
   ![](images/041.png " ")
@@ -284,7 +284,7 @@ Terraform provides a reusable process for creating infrastructure.  In some case
 
   ![](images/045.png " ")
 
-## STEP 5: Connect to your Marketplace Developer Image
+## STEP 7: Connect to your Marketplace Developer Image
 
 For more information about the Marketplace Developer Image [click here](https://cloudmarketplace.oracle.com/marketplace/en_US/listing/54030984).
 

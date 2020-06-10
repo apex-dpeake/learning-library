@@ -4,20 +4,39 @@
 The industry’s leading database continues to deliver leading-edge innovations, including machine learning, to enable self-driving data management. This enterprise-proven, database cloud service is designed to support mixed workloads through any deployment strategy, on premises or in the cloud. Experience the power of the next-generation database with unmatched performance, ease, and flexibility by clicking on one of our hands-on workshops.
 
 
+
 ## Workshops
-[New Features for Developers](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/freetier/index.html)  
+- [New Features for Developers](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/freetier/index.html)  
 
-[Multitenant Fundamentals](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  
+- [JSON](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/json-freetier) 
 
-[In-Memory Fundamentals](https://oracle.github.io/learning-library/data-management-library/database/in-memory/freetier/index.html) 
+- [Spatial](https://oracle.github.io/learning-library/data-management-library/database/spatial/freetier/index.html)
 
-[Containerized Development on the Oracle Database](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker) 
+- [Multitenant Fundamentals](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  
 
-[Create a Database in a Docker Container](https://oracle.github.io/learning-library/data-management-library/database/docker/create-database-in-docker) 
+- [In-Memory Fundamentals](https://oracle.github.io/learning-library/data-management-library/database/in-memory/freetier/index.html) 
 
-[Create a Database on OCI VM ](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/create-oci-vm-db) 
+<<<<<<< HEAD
+### Converged
 
-[Connect SQL Developer to OCI VM Database](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/connect-oci-vm-db-sqldeveloper) 
+[![](./images/converged-database.png)](https://laxmi-oss.github.io/learning-library/data-management-library/database/converged-database/freetier/index.html)  ![](./images/transparent.png " ")  [![](./images/converged-database.png)](https://laxmi-oss.github.io/learning-library/data-management-library/database/converged-database/ssworkshop/index.html)
+
+### In-Memory Workshops
+=======
+- [Hybrid Partitioning](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/hybridpart-freetier) 
+>>>>>>> upstream/master
+
+- [Automatic Indexing](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/autoindex-freetier) 
+
+- [Python](https://oracle.github.io/learning-library/developer-library/oracle-db-features-for-developers/workshops/python-freetier) 
+
+- [Containerized Development on the Oracle Database](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker/freetier) 
+
+- [Create a Database in a Docker Container](https://oracle.github.io/learning-library/data-management-library/database/docker/create-database-in-docker) 
+
+- [Create a Database on OCI VM ](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/create-oci-vm-db) 
+
+- [Connect SQL Developer to OCI VM Database](https://oracle.github.io/learning-library/data-management-library/database/oci-vm-database/create-oci-vm-db/) 
 
 
 ## Get an Oracle Cloud Trial Account for Free!

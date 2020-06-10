@@ -1,4 +1,9 @@
-# Discovery Lab 2 - Verify a Sensitive Data Model with Oracle Data Safe
+# Verify a Sensitive Data Model with Oracle Data Safe
+
+## Introduction
+Using Oracle Data Safe, verify a sensitive data model by using the verification option in the Library and by using the Data Discovery wizard.
+
+To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
 
 ## Objectives
 In this lab, you learn how to do the following:
@@ -17,143 +22,146 @@ In this lab, you learn how to do the following:
 7. In Oracle Data Safe, run the verification test again against your database, but this time use the Data Discovery wizard. Observe the verification findings. Do you need to do anything to your sensitive data model?
 8. If needed, manually update your sensitive data model from the Library so that it accurately reflects your target database.
 
-## Step-by-Step Instructions
+## Steps
 
-### Part 1: Connect to ExaCS DB using SQL Developer
+### Step 1: Connect to ExaCS DB using SQL Developer
 
-Please visit [Lab 4: Configuring a development system for use with your EXACS database](ConfigureDevClient.md) for instructions to securely configure ExaCS to connect using Oracle SQL Developer, SQLXL and SQL*Plus.
+Please visit [Lab 4: Configuring a development system for use with your EXACS database](?lab=lab-4-configure-development-system-for-use) for instructions to securely configure ExaCS to connect using Oracle SQL Developer, SQLXL and SQL*Plus.
 
-### Part 2: In SQL Developer, add a column to the `EMPLOYEES` table in your database
+### Step 2: In SQL Developer, add a column to the `EMPLOYEES` table in your database
 - In SQL Developer, run the following command to connect to PDB1 pluggable database:
 
 ```
-ALTER SESSION SET CONTAINER=PDB1;
+<copy>ALTER SESSION SET CONTAINER=YOUR_PDB_NAME</copy>
 ```
-- On the SQL Worksheet, run the following command to add an `AGE` column to the `EMPLOYEES` table. You can expand the EMPLOYEES table in the Navigator to the left to see the current columns.
+- On the SQL Worksheet, run the following command to add an `AGE` column to the `EMPLOYEES` table.
 
 ```
-ALTER TABLE HCM1.EMPLOYEES ADD AGE NUMBER;
+<copy>ALTER TABLE HCM1.EMPLOYEES ADD AGE NUMBER;</copy>
 ```
 - Click the **Refresh** button to view the newly added column.
 - Run the following command to gather schema statistics.
 
 ```
-EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HCM1');
+<copy>EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HCM1');</copy>
 ```
 - Keep this tab open because you return to it in a later step.
 
-### Part 3: Sign in to the Oracle Data Safe Console in your region
+### Step 3: Sign in to the Oracle Data Safe Console in your region
 
 - From the navigation menu, click **Data Safe**
 
-![](./images/dbsec/datasafe/login/navigation.png)
+![](./images/dbsec/datasafe/login/navigation.png " ")
 
 - You are taken to the **Registered Databases** Page.
 - Click on **Service Console**
 
-![](./images/dbsec/datasafe/login/service-console.png)
+![](./images/dbsec/datasafe/login/service-console.png " ")
 
 - You are taken to the Data Safe login page. Sign into Data Safe using your credentials.
 
-![](./images/dbsec/datasafe/login/sign-in.png)
+![](./images/dbsec/datasafe/login/sign-in.png " ")
 
-### Part 4: Verify your sensitive data model against your database by using the verification option on the Sensitive Data Models page
+### Step 4: Verify your sensitive data model against your database by using the verification option on the Sensitive Data Models page
 
 - In the Oracle Data Safe Console, click the **Library** tab, and then click **Sensitive Data Models**.
 - Select the check box for your sensitive data model that you created in Discovery Lab 1 - Discover Sensitive Data with Oracle Data Safe (**<username> SDM1**).
 - Click **Verify Against Target**.
 
-![](./images/dbsec/datasafe/discovery/sensitive-verify.png)
+![](./images/dbsec/datasafe/discovery/sensitive-verify.png " ")
 
 
 - On the **Select Target for Data Model Verification** page, select your target database, and click **Continue**.<br>
 The verification job is started.
 
-![](./images/dbsec/datasafe/discovery/select-model-target.png)
+![](./images/dbsec/datasafe/discovery/select-model-target.png " ")
 
 - When the job is finished, notice that the **Detail** column reads `Data model verification job finished successfully`.
 - Click **Continue**.
 - On the **Data Model Verification Result** page, notice that there are no differences to report. The verification job did not find the new sensitive column, AGE.
   - The verification feature checks whether the sensitive columns in the sensitive data model are present in the target database. If there are some present in the sensitive data model, but missing in the target database, it reports them. In addition, it reports new referential relationships for the columns already present in the sensitive data model. It does not, however, discover ALL the relationships.
 
-![](./images/dbsec/datasafe/discovery/data-model-verification.png)
+![](./images/dbsec/datasafe/discovery/data-model-verification.png " ")
 
 - Click **Continue**.
 
-### Part 5: Manually add the AGE column to your sensitive data model
+### Step 5: Manually add the AGE column to your sensitive data model
 
 - On the Sensitive Data Model: **<username> SDM1** page, click **Add**. The **Add Sensitive Columns** dialog box is displayed.
 
-![](./images/dbsec/datasafe/discovery/sdm1-data-model.png)
+![](./images/dbsec/datasafe/discovery/sdm1-data-model.png " ")
 
 - Expand the **HCM1** schema, and then the **EMPLOYEES** table.
 - Select the **AGE** column.
 
-![](./images/dbsec/datasafe/discovery/add-sensitive.png)
+![](./images/dbsec/datasafe/discovery/add-sensitive.png " ")
 - At the top of the dialog box in the **Sensitive Type** field, enter **age**. `AGE` is automatically retrieved as a sensitive type and you can select it.
 
-![](./images/dbsec/datasafe/discovery/add-sensitive-2.png)
+![](./images/dbsec/datasafe/discovery/add-sensitive-2.png " ")
 
 - Scroll to the bottom and click **Add to Result**.
 Your sensitive data model is updated to include the `AGE` column.
 - To verify, enter age in the search box.
 `HCM1.EMPLOYEES.AGE` should be listed under **Biographic Information**.
 
-![](./images/dbsec/datasafe/discovery/age-search.png)
+![](./images/dbsec/datasafe/discovery/age-search.png " ")
 
 - Click **Save and Continue**.
 - Click **Exit**.
 
-### Part 6: Drop the AGE column in your database
+### Step 6: Drop the AGE column in your database
 
 - Return to SQL Developer.
 - On the SQL Worksheet, run the following commands to drop the `HCM1.EMPLOYEES.AGE` column.
 
 ```
-ALTER TABLE HCM1.EMPLOYEES DROP COLUMN AGE;
+<copy>ALTER TABLE HCM1.EMPLOYEES DROP COLUMN AGE;</copy>
 ```
 - Run the following command to gather schema statistics.
 
 ```
-EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HCM1');
+<copy>EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HCM1');</copy>
 ```
-- To verify that the `EMPLOYEES` table no longer has an `AGE` column, on the **Navigator** tab, select the `HCM1` schema from the first drop-down menu.
-- From the second drop-down menu, ensure that **Tables** is selected.
-- Expand the `EMPLOYEES` table.
-- Notice that the `AGE` column is gone.
+- To verify that the `EMPLOYEES` table no longer has an `AGE` column, run the following script:
+
+```
+<copy>SELECT AGE FROM HCM1.EMPLOYEES;</copy>
+```
+
+- Notice that the `AGE` column is gone and you receive an "Invalid Identifier" message when you run the command.
 - If the AGE column is still there, click the **Refresh** button to refresh the table.
 
 
-### Part 7: Verify your sensitive data model against the database again, but this time using the Data Discovery wizard
+### Step 7: Verify your sensitive data model against the database again, but this time using the Data Discovery wizard
 
 - Return to Oracle Data Safe.
 - Click the **Home** tab, and then click **Data Discovery**.
 
-![](./images/dbsec/datasafe/discovery/discovery-nav.png)
+![](./images/dbsec/datasafe/discovery/discovery-nav.png " ")
 
 - On the **Select Target for Sensitive Data Discovery** page, select your target database, and then click **Continue**.
 
-![](./images/dbsec/datasafe/discovery/discovery-target.png)
+![](./images/dbsec/datasafe/discovery/discovery-target.png " ")
 
 - The **Select Sensitive Data Model** page is displayed.
 - For **Sensitive Data Model**, select **Pick from Library**, and then click **Continue**. The **Select Sensitive Data Model** page is displayed.
 
-![](./images/dbsec/datasafe/discovery/library-pick.png)
+![](./images/dbsec/datasafe/discovery/library-pick.png " ")
 - Select your sensitive data model, **<username> SDM1**.
 - Scroll down to the bottom of the page and select **Verify if SDM is compatible with the
 target**.
 
-![](./images/dbsec/datasafe/discovery/verify-sdm1.png)
+![](./images/dbsec/datasafe/discovery/verify-sdm1.png " ")
 - To start the verification job, click **Continue**.
 - If the job finishes successfully, click **Continue**.
 The **Data Model Verification Result** page is displayed.
 - Expand **Missing sensitive columns**, and then `HCM1`.
 The Data Discovery wizard identifies the `AGE` column as missing from the database.
 
-![](./images/dbsec/datasafe/discovery/missing.png)
+![](./images/dbsec/datasafe/discovery/missing.png " ")
 
 
-### Part 8: Manually update your sensitive data model from the Library
+### Step 8: Manually update your sensitive data model from the Library
 
 You can manually update your sensitive data model while continuing to work in the Data Discovery wizard. In which case, you simply deselect your sensitive column and save your sensitive data model. This part, however, shows you another way to do it from the Library.
 - Click **Exit** to exit the Data Discovery wizard.
@@ -161,9 +169,9 @@ You can manually update your sensitive data model while continuing to work in th
 - Click your sensitive data model to open it.
 - Search for **AGE**.
 
-![](./images/dbsec/datasafe/discovery/age-search.png)
+![](./images/dbsec/datasafe/discovery/age-search.png " ")
 - In the list of sensitive columns, deselect `HCM1.EMPLOYEES.AGE`.
--Your sensitive data model is now updated and accurate.
+- Your sensitive data model is now updated and accurate.
 - Click **Save** then **Exit**.
 
 ### All Done!

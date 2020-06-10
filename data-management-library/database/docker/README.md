@@ -9,7 +9,7 @@ Click on one of our workshops below to access the content.
 
 [![Oracle Database Docker Workshop](./create-database-in-docker/images/docker-database-workshop.png " ")](https://oracle.github.io/learning-library/data-management-library/database/docker/create-database-in-docker)
 
-[![Oracle Database Docker Workshop](./db-on-docker/images/db-on-docker.png " ")](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker)
+[![Oracle Database and Container Development Workshop](./db-on-docker/images/db-on-docker.png " ")](https://oracle.github.io/learning-library/data-management-library/database/docker/db-on-docker/freetier)
 
 
 ## Get an Oracle Cloud Trial Account for Free!

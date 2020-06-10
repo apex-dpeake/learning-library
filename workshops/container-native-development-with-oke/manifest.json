@@ -21,7 +21,7 @@
             "title": "Lab 200: Automate Deployment to Kubernetes",
             "description": "Use Wercker to set up a managed Kubernetes cluster and deploy to it",
             "partnumber": "Ennnnn_01",
-            "publisheddate": "05/02/2020",
+            "publisheddate": "04/22/2020",
             "contentid": "12nnnn",
             "filename": "LabGuide200.md"
         },
@@ -45,7 +45,7 @@
             "title": "Lab 500: (Optional) Extend Your Application with a Function",
             "description": "Install Fn in Kubernetes and Deploy a Function",
             "partnumber": "Ennnnn_01",
-            "publisheddate": "05/02/2020",
+            "publisheddate": "04/22/2020",
             "contentid": "12nnnn",
             "filename": "LabGuide500.md"
         }

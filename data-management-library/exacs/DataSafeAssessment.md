@@ -1,4 +1,9 @@
-# Assessment Lab 1 - Assess Database Configurations with Oracle Data Safe
+# Assess Database Configurations with Oracle Data Safe
+
+## Introduction
+Using Oracle Data Safe you can assess the security of a database by using the Security Assessment feature and fix issues.
+
+To log issues and view the Lab Guide source, go to the [github oracle](https://github.com/oracle/learning-library/issues/new) repository.
 
 ## Objectives
 In this lab, you learn how to do the following:
@@ -12,37 +17,38 @@ Suppose that you are notified by the “Audit and Compliance” department that 
 - `APP_USER`
 - `DBA_DEBRA` (Company DBA)
 - `DBA_HARVEY` (Company Junior DBA)
+- `EVIL_RICH`
 - `SECURE_STEVE`
 
-## Step-by-Step Instructions
+## Steps
 
-### Part 1: Connect to your ExaCS database as the SYS user with SQL Developer
+### Step 1: Connect to your ExaCS database as the SYS user with SQL Developer
 
-Please visit [Lab 4: Configuring a development system for use with your EXACS database](ConfigureDevClient.md) for instructions to securely configure ExaCS to connect using Oracle SQL Developer, SQLXL and SQL*Plus.
+Please visit [Lab 4: Configuring a development system for use with your EXACS database](?lab=lab-4-configure-development-system-for-use) for instructions to securely configure ExaCS to connect using Oracle SQL Developer, SQLXL and SQL*Plus.
 
-### Part 2: In the Oracle Data Safe Console, generate a Comprehensive Assessment report
+### Step 2: In the Oracle Data Safe Console, generate a Comprehensive Assessment report
 - Return to the Oracle Data Safe Console.
 - Click the **Home** tab and then **Security Assessment**.
 
-![](./images/dbsec/datasafe/assessment/security-assessment.png)
+![](./images/dbsec/datasafe/assessment/security-assessment.png " ")
 - On the **Security Assessment** page, select the check box for your target database, and click **Assess**.
 
-![](./images/dbsec/datasafe/assessment/target.png)
+![](./images/dbsec/datasafe/assessment/target.png " ")
 
 - Wait a moment for the report to generate.
 - When the report is generated, review the high risk, medium risk, and low risk values.
 - In the **Last Generated Report** column, click **View Report**.
 
-![](./images/dbsec/datasafe/assessment/target2.png)
+![](./images/dbsec/datasafe/assessment/target2.png " ")
 
 - The **Comprehensive Assessment** report is displayed on the **Reports** tab.
 - In the upper right corner, view the target name, when the database was assessed, and the database version.
 
-![](./images/dbsec/datasafe/assessment/comprehensive-assessment.png)
+![](./images/dbsec/datasafe/assessment/comprehensive-assessment.png " ")
 
 - View the values for the different risk levels. These values give you an idea of how secure your database is.
 
-![](./images/dbsec/datasafe/assessment/high-risk.png)
+![](./images/dbsec/datasafe/assessment/high-risk.png " ")
 
 - View the values for security controls, user security, and security configurations. These totals show you the number of findings for each high-level category.
 - Browse the report by scrolling down and expanding and collapsing categories.
@@ -50,9 +56,9 @@ Each category lists related findings about your database and how you can make ch
 11. View the **Summary** table.
 This table compares the number of findings for each category and counts the number of findings per risk level. It helps you to identify the areas that need attention on your database.
 
-![](./images/dbsec/datasafe/assessment/summary.png)
+![](./images/dbsec/datasafe/assessment/summary.png " ")
 
-### Part 3: Review the Medium Risk, Low Risk, and Advisory findings
+### Step 3: Review the Medium Risk, Low Risk, and Advisory findings
 - At the top of the report, click **Medium Risk** to filter the report to show only the medium risk findings.
 - Deselect all other risk levels.
 - Scroll through the report to view the medium risk findings.
@@ -63,90 +69,90 @@ This table compares the number of findings for each category and counts the numb
 - Deselect all other risk levels.
 - Review the advisory findings.
 
-### Part 4: Review the Evaluate findings and fix some of them, if possible
+### Step 4: Review the Evaluate findings and fix some of them, if possible
 
 - At the top of the report, click **Evaluate** to filter the report to show only the Evaluate findings.
 
-![](./images/dbsec/datasafe/assessment/evaluate.png)
+![](./images/dbsec/datasafe/assessment/evaluate.png " ")
 - Deselect all other risk levels.
 - Scroll through the report to view the findings.
-- Focus on **System Privilege Grants**:
-  - System privileges `(ALTER USER, CREATE USER, DROP USER)` can be used to create and modify other user accounts, including changing passwords. This ability can be abused to gain access to another user's account, which may have greater privileges. The Privilege Analysis feature may be helpful to determine whether or not a user or role have used account management privileges.
+- Focus on **System Privilege Grants** under Privileges and Roles:
+  - System privileges `(ALTER USER, CREATE USER, DROP USER)` can be used to create and modify other user accounts, including the ability to change passwords. This ability can be abused to gain access to another user's account, which may have greater privileges. The Privilege Analysis feature may be helpful to determine whether or not a user or role has used account management privileges.
   - Security Assessment found 59 grants of system privilege grants on your target database.
 
-![](./images/dbsec/datasafe/assessment/system-grants.png)
+![](./images/dbsec/datasafe/assessment/system-grants.png " ")
 
   - Fix: In SQL Developer, run the following query on your database to find out who has the `PDB_DBA` role. Sort the results by `GRANTED_ROLE` to make it easy to identify the users with the role. Then, revoke the `PDB_DBA` role from the `EVIL_RICH` user account.
 
 ```
-select * from dba_role_privs;
+<copy>select * from dba_role_privs;</copy>
 ```
 
-![](./images/dbsec/datasafe/assessment/dba-roles-privs.png)
+![](./images/dbsec/datasafe/assessment/dba-roles-privs.png " ")
 
 ```
-revoke pdb_dba from EVIL_RICH;
+<copy>revoke pdb_dba from EVIL_RICH;</copy>
 ```
 
 - Focus on **Audit Records**:
   - Auditing is an essential component for securing any system. The audit trail lets you monitor the activities of highly privileged users. Even though auditing cannot prevent attacks that exploit gaps in other security policies, it does act as a critical last line of defense by detecting malicious activity. Enable unified auditing policies on the database and ensure that audit records exist. This is a STIG, GDPR, and CIS recommended policy.
 
-![](./images/dbsec/datasafe/assessment/audit.png)
+![](./images/dbsec/datasafe/assessment/audit.png " ")
 
 - Review the Details section in this finding and answer these questions: How many audit trails exist in your database and how many of those trails contain audit records? The report states that Security Assessment examined two audit trails and found records in one audit trail. There's only one audit trail because Autonomous Transaction Processing databases are in pure unified audit mode.
 - Fix: You do not need to do anything on your database because your database already has unified auditing policies enabled.
 - Focus on **Unified Audit**:
 
-![](./images/dbsec/datasafe/assessment/unified-audit.png)
+![](./images/dbsec/datasafe/assessment/unified-audit.png " ")
 
 - Unified Auditing is the recommended audit method and is available in Oracle Database 12.1 and later releases. Not using Unified Auditing or disabling unified auditing policies is a risk. Verify that unified audit policies are enabled on the database. Audit all sensitive operations, including privileged user activities. Also audit access to application data that bypasses the application.
 - How many unified audit policies are on your target database and how many of them are enabled?
 
-### Part 5: Review the Pass findings
+### Step 5: Review the Pass findings
 
 - At the top of the report, click **Advisory** to filter the report to show only the Advisory findings.
 
-![](./images/dbsec/datasafe/assessment/advisory.png)
+![](./images/dbsec/datasafe/assessment/advisory.png " ")
 
 - Deselect all other risk levels.
 - Scroll through the report to review the findings. For example, the following findings have a **Pass status**.
 
-![](./images/dbsec/datasafe/assessment/pass-status.png)
+![](./images/dbsec/datasafe/assessment/pass-status.png " ")
 
   - User Accounts in `SYSTEM` or `SYSAUX` Tablespace Case-Sensitive Passwords
 
-![](./images/dbsec/datasafe/assessment/system-sysaux.png)
+![](./images/dbsec/datasafe/assessment/system-sysaux.png " ")
 
   - Users with Default Passwords
 
-![](./images/dbsec/datasafe/assessment/users-default-password.png)
+![](./images/dbsec/datasafe/assessment/users-default-password.png " ")
 
   - Password Verifiers
   - User Parameters
   - Users with Unlimited Password Lifetime
   - System Privileges Granted to `PUBLIC`
 
-![](./images/dbsec/datasafe/assessment/system-privileges-public.png)
+![](./images/dbsec/datasafe/assessment/system-privileges-public.png " ")
 
   - Roles Granted to Public
 
-![](./images/dbsec/datasafe/assessment/public-roles.png)
+![](./images/dbsec/datasafe/assessment/public-roles.png " ")
 
   - Column Privileges Granted to `PUBLIC DBA` Role
 
-![](./images/dbsec/datasafe/assessment/column-privileges.png)
+![](./images/dbsec/datasafe/assessment/column-privileges.png " ")
 
   - ....and more
 
-### Part 6: Rerun Security Assessment and compare the results to the first assessment
+### Step 6: Rerun Security Assessment and compare the results to the first assessment
 
-1. In the Oracle Data Safe Console, click the **Home** tab, and then click **Security Assessment**.
-2. On the **Security Assessment** page, select the check box for your target database, and then click **Assess**.
-3. In the **Last Generated Report** column, click the **View Report** link. The **Comprehensive Assessment** report is displayed.
-4. View the totals for the risk levels.
+- In the Oracle Data Safe Console, click the **Home** tab, and then click **Security Assessment**.
+- On the **Security Assessment** page, select the check box for your target database, and then click **Assess**.
+- In the **Last Generated Report** column, click the **View Report** link. The **Comprehensive Assessment** report is displayed.
+- View the totals for the risk levels.
 If you fixed any of the previous risks, then the totals will be lower than in the first assessment.
-5. Check the **Account Management Privileges** entry in the Evaluate category. Notice that `EVIL_RICH` is no longer listed.
-6. To compare the results with the first assessment, do the following:
+- Check the **Account Management Privileges** entry in the Evaluate category. Notice that `EVIL_RICH` is no longer listed.
+- To compare the results with the first assessment, do the following:
  - Click the **Reports** tab.
  - Click **Security Assessment**.
  - Click **Comprehensive Assessments**.

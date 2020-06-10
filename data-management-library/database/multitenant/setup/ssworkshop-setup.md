@@ -1,4 +1,4 @@
-# Setup - SSWorkshop #
+# Setup - LiveLabs#
 
 ## Introduction
 This lab will show you how to login to the cloud and setup your environment using Oracle Resource Manager.  

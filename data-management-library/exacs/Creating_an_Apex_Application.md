@@ -8,7 +8,7 @@ This lab shows how to integrate the SDK and a REST Service with the Python appli
 
 - The First Python Application will upload data to oracle database using the Python SDK. This application will parse tweets and unpacks the tweets from a file using the Python SDK for Oracle DB before uploading it to the database.
 
-- The second Python Application will upload tweets in the form of JSON objects using the REST Service we created in the earlier exercise. Please refer **Lab 17-2** for more information. 
+- The second Python Application will upload tweets in the form of JSON objects using the REST Service we created in the earlier exercise. Please refer **Lab 16-2** for more information. 
 
 - To Demonstrate the native JSON support in Oracle Database, we will then create an APEX application which will directly extract data from these JSON objects without having to parse them first like any other data structure within the database.
 
@@ -22,58 +22,36 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you completed the previous parts of this lab before you start this lab. Refer [Lab 17-1](?lab=lab-17-1-install-ords-apex) and [Lab 17-2](?lab=lab-17-2-create-restservice-on-database) for more info.
+- Please ensure you completed the previous parts of this lab before you start this lab. Refer **Lab 16-1** and **Lab 16-2** for more info.
 
 ## Steps
 
 ### **STEP 1: Download the Python Applications**
 
-- For this lab, you can download the application available in the following repositories. 
-
-- ssh into the developer client we provisioned in lab-4.
+- For this lab, you can download the applications to your developer client, from in the following repositories. These applications will help us load data into our database.
 
 ```
-<copy>ssh -i <path_to_private_ssh_key> opc@PublicIP</copy>
+<copy>wget -O jsonapp.zip https://objectstorage.us-ashburn-1.oraclecloud.com/p/YRsIM_FwyTnFwvjYHNVSGrq_-vZkZ_h7NVrzDXqi6vY/n/orasenatdpltintegration02/b/ExaCSScripts/o/jsonapp.zip</copy>
 ```
 
-```
-<copy>cd /home/opc/</copy>
-```
+- Execute the above command to download a zipfile of the first Python Application. 
 
-```
-<copy>mkdir apex</copy>
-```
-
-```
-<copy> cd /home/opc/apex</copy>
-```
-
-- Download python application and parameters files in **/home/opc/apex/** folder as shown below.
-
-```
-<copy>wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/data-management-library/exacs/scripts/pythonApp/jsonapp.py?raw=true</copy>
-```
-
-```
-<copy>wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/data-management-library/exacs/scripts/pythonApp/parameters.txt?raw=true</copy>
-```
+- Copy the zip file to the developer client we provisioned in lab-4 for our database and unzip it to a directory on your machine.
 
     - You will see:
         - Python Application: **jsonapp.py**
         - Config file: **parameters.txt**
+        - Tweet Dataset file: **testjson.json**
 
     **Note : This Application will store the data in "TWEETSDATA" table which you can use to verify that the data is loaded**
 
-
-- Download python application and json files as shown below. Copy files to the developer client we provisioned in lab-4 for our database.
-
 ```
-<copy>wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/data-management-library/exacs/scripts/pythonApp/pythonapp.py?raw=true</copy>
-```
-```
-<copy>wget --no-check-certificate --content-disposition https://github.com/oracle/learning-library/blob/master/data-management-library/exacs/scripts/pythonApp/testjson.json?raw=true</copy>
+<copy>wget -O pythonapp.zip https://objectstorage.us-ashburn-1.oraclecloud.com/p/aScoF9QtxLAo558bbsyp1_rA0SutbFk_ASsYyd_5WBE/n/orasenatdpltintegration02/b/ExaCSScripts/o/pythonapp.zip</copy>
 ```
 
+- Execute the above command to download a zipfile of the second Python Application. 
+
+- Copy the zip file to the developer client we provisioned in lab-4 for our database and unzip it to a directory on your machine.
 
     - You will see:
         - Python Application: **pythonapp.py**
@@ -81,7 +59,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
     **Note : This Application will store the data in "JSONTWEETS" table which you can use to verify that the data is loaded**
 
-### **STEP 2: Setting up the configuration file for the Python App**
+### **STEP 2: Setting up the configuration file for the first application**
 
 - The Python Application you installed is going to load the tweets from tweets stores in JSON format into the Oracle Database.
 
@@ -98,10 +76,10 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 <copy>vi parameters.txt</copy>
 ```
 
-- change all the parameters based on your environment.
+- change all the parameters based on your database environment.
 
 ```
-<copy>jsonfile=<file containing Tweets>.json
+<copy>jsonfile=testjson.json
 ip=<DB IP>
 port=<DB Port>
 service=<DB Service Name>
@@ -115,6 +93,7 @@ sys_password=<Database SYS Password></copy>
 - Make sure you are in the folder with the Python App.
 
 - Run the First Python App.
+    - This app will extract tweets from the file, parse them and store the data into the respective columns using the Python SDK available for Oracle Cloud Infrastructure.
 
 ```
 <copy>python jsonapp.py parameters.txt</copy>
@@ -128,11 +107,12 @@ sys_password=<Database SYS Password></copy>
 
 - Run the second Python App.
 
-    - This app will directly store JSON objects in Oracle Database because JSON data is natively supported in Oracle Database.
+    - This app will directly store JSON objects in Oracle Database using the REST Service we developed in the previous part of the lab. As JSON data is natively supported in Oracle Database we can easily extract data directly from the JSON object using a dot notation method.
 
 ```
 <copy>python3 pythonapp.py <REST Endpoint URL> <JSON File Name with extension></copy>
 ```
+
 ![](./images/apex/pythonapp2run.png " ")
 
 - verify that the tweets are being stored in the database by connecting to the database, using SQL Developer, as the same user for which you created the REST Service.
@@ -149,7 +129,10 @@ sys_password=<Database SYS Password></copy>
 ### **STEP 4: Create an APEX Application**
 
 - Login to APEX using the following URL : 
-   http://<ip_address>:\<ORDS Port\>/ords
+   
+```
+http://ip_address:ORDS_Port/ords
+```
    
 ![](./images/apex/Picture400-4.png " ")
 

@@ -13,74 +13,82 @@ The following lab requires an Oracle Public Cloud account. You may use your own 
 
 ## Part 1. Provisioning an ADW Instance
 
--   Once you are logged in, you are taken to the OCI Console. Click **Create a data warehouse**
+1.  Once you are logged in, you are taken to the OCI Console. Click **Create a data warehouse**
 
 ![](./images/picture100-25.png) 
 
--  This will bring up the **Create Autonomous Data Warehouse** screen where you will specify the configurations of the instance. Select the root compartment, or another compartment of your choice.
+2. This will bring up the **Create Autonomous Data Warehouse** screen where you will specify the configurations of the instance. Select the root compartment, or another compartment of your choice.
 
 ![](./images/picture100-26.jpg)
 
--  Specify a memorable display name for the instance. Also specify your database's name (e.g. **ADW_FlightDelay**).
+3. Specify a memorable display name for the instance. Also specify your database's name (e.g. **ADW_FlightDelay**).
 
 ![](./images/picture100-27.jpeg)
 
--  Next, select the number of CPUs and storage size. Here, we will use **1 CPU** and **1 TB of storage**.
+4.  Next, select the number of CPUs and storage size. Here, we will use **1 CPU** and **1 TB of storage**.
 
 ![](./images/picture100-28.jpeg)
 
--  Then, specify an **ADMIN password** for the instance.
+5.  Then, specify an **ADMIN password** for the instance.
 
 ![](./images/picture100-29.jpeg)
 
--  For this lab, we will select **Subscribe To A New Database License**. If your organization owns Oracle Database licenses already, you may bring those license to your cloud service.
+6.  For this lab, we will select **Subscribe To A New Database License**. If your organization owns Oracle Database licenses already, you may bring those license to your cloud service.
 
 ![](./images/picture100-37.JPG)
 
--  Make sure everything is filled out correctly, then proceed to click on **Create Autonomous Data Warehouse**.
+7. Make sure everything is filled out correctly, then proceed to click on **Create Autonomous Data Warehouse**.
 
 ![](./images/picture100-31.jpeg)
 
--  Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your display name to see its details.
+8.  Your instance will begin provisioning. Once the state goes from Provisioning to Available, click on your display name to see its details.
 
 ![](./images/picture100-32.jpeg)
 
--  You now have created your first Autonomous Data Warehouse instance. Have a look at your instance's details here including its name, database version, CPU count and storage size.
+9.  You now have created your first Autonomous Data Warehouse instance. Have a look at your instance's details here including its name, database version, CPU count and storage size.
 
 ![](./images/picture100-33.jpeg)
 
 
 ## Part 2. Creating OML Users
 
-- Click the **Service Console** button on your Autonomous Data Warehouse details page.
+1. Click the **Service Console** button on your Autonomous Data Warehouse details page.
 
 ![](./images/picture100-34.jpeg)
 
-- Click the **Administration** tab and click **Manage Oracle ML Users** to go to the OML user management page.
+2. Click the **Administration** tab and click **Manage Oracle ML Users** to go to the OML user management page.
 
 ![](./images/picture100-35.jpeg)
 
 This will open OML user Administration page as a new tab within your browser. 
 
--   Click **Create** button to create a new OML user. Note that this will also create a new database user with the same name. This newly created user will be able to use the OML notebook application. Note that you can also enter an email address to send an email confirmation to your user (*for this lab you can use your own personal email address*) when creating the user.
+3.  Click **Create** button to create a new OML user. Note that this will also create a new database user with the same name. This newly created user will be able to use the OML notebook application. Note that you can also enter an email address to send an email confirmation to your user (*for this lab you can use your own personal email address*) when creating the user.
 
 ![](./images/picture700-5.png)
 
--   Enter the required information for new user (Username:**omluser1** and Password). If you supplied a valid **email address**, a welcome email should arrive within a few minutes to your Inbox. Click the **Create** button, in the top-right corner of the page, to create the user.
+4.  Enter the required information for new user (Username:**omluser1** and Password). If you supplied a valid **email address**, a welcome email should arrive within a few minutes to your Inbox. Click the **Create** button, in the top-right corner of the page, to create the user.
 
 ![](./images/picture700-7.png)
 
--   Below is a welcome email. It includes a direct link to the OML application for the user. 
+5.   Below is a welcome email. It includes a direct link to the OML application for the user. 
 
 ![](./images/picture700-8.png)
 
--   After you click **Create**, you can find the user on the list of Users. 
+6.  After you click **Create**, you can find the user on the list of Users. 
 
 ![](./images/picture700-9.png)
 
--   Using the same steps, create another user named **omluser2**.
+7.   Using the same steps, create another user named **omluser2**.
 
 ![](./images/picture700-10.png)
 
 You will use **omluser1** later in this workshop. 
+
+
+## Acknowledgements
+
+- **Author** - NATD Solution Engineering - Austin Hub (Joowon Cho)
+- **Last Updated By/Date** - Joowon Cho, Solutions Engineer, May 2020
+
+See an issue?  Please open up a request [here](https://github.com/oracle/learning-library/issues).   Please include the workshop name and lab in your request.    Please include the workshop name and lab in your request. 
 

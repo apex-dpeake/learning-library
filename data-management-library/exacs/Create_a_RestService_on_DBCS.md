@@ -13,7 +13,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Required Artifacts
 
-- Please ensure you have installed ORDS and APEX on the database instance you want to create a REST service. Refer [Lab 17-1](?lab=lab-17-1-install-ords-apex) for more information.
+- Please ensure you have installed ORDS and APEX on the database instance you want to create a REST service. Refer **lab 16-1**for more information.
 
 
 ## Steps
@@ -22,9 +22,16 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 - Log into your APEX account using the default workspace.
 
-    - **Workspace**: internal
-    - **user**: admin
-    - **password**: <DB sys password>
+```
+The Link to connect to APEX is : http://IP_address_of_ORDS_server:ORDS_Port/ords
+```
+Note :
+  1. if you have executed part-1 of this lab, The IP address of the ORDS server will be IP address of the compute instance provisioned in previous lab or the database server itself depending on the architecture you have selected while executing the terraform script.
+  2. ORDS Port : This will be the port where ORDS is hosted. This is the port you entered into env-vars.sh before running the terraform script.
+  
+  - **Workspace**: internal
+  - **user**: admin
+  - **password**: <DB sys password>
     
     This is the same password we used while running the terraform script.
 
@@ -160,5 +167,5 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - You are going to use this REST endpoint in the Python Application in the next lab.
 
 
-- You are now ready to move to [Lab 17-3](?lab=lab-17-3-build-apex-application-on-exacs)
-
+- You are now ready to move to the next part of this lab.
+- **Click on Lab 16-3 from the menu on the right.**

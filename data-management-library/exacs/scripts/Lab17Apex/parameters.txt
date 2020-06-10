@@ -1,5 +1,0 @@
-jsonfile=<json file>
-ip=<db ip address>
-port=<db port>
-service=<db service name>
-sys_password=<password>

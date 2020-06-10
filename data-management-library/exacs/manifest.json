@@ -92,48 +92,6 @@
         "filename": "DataSafeSDD4.md"
       },
       {
-        "title": "Lab 7-8: Discover and Mask Sensitive Data by Using Default Masking Formats in Oracle Data Safe",
-        "description": "Discover and Mask Sensitive Data by Using Default Masking Formats in Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeDM.md"
-      },
-      {
-        "title": "Lab 7-9: Explore Data Masking Results and Reports in Oracle Data Safe",
-        "description": "Explore Data Masking Results and Reports in Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeDM2.md"
-      },
-      {
-        "title": "Lab 7-10: Create a Masking Format in Oracle Data Safe",
-        "description": "Create a Masking Format in Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeDM3.md"
-      },
-      {
-        "title": "Lab 7-11: Configure a Variety of Masking Formats with Oracle Data Safe",
-        "description": "Configure a Variety of Masking Formats with Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeDM4.md"
-      },
-      {
-        "title": "Lab 7-12: Provision Audit and Alert Policies and Configure an Audit Trail in Oracle Data Safe",
-        "description": "Provision Audit and Alert Policies and Configure an Audit Trail in Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeAudit.md"
-      },
-      {
-        "title": "Lab 7-13: Analyze Audit Data with Reports and Alerts in Oracle Data Safe",
-        "description": "Analyze Audit Data with Reports and Alerts in Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeAudit2.md"
-      },
-      {
-        "title": "Lab 7-14: Create and Provision a Custom Audit Policy and View Audit Data in Oracle Data Safe",
-        "description": "Create and Provision a Custom Audit Policy and View Audit Data in Oracle Data Safe",
-        "publisheddate": "4/20/2020",
-        "filename": "DataSafeAudit3.md"
-      },
-      {
         "title": "Lab 8: Migrate an on-prem application schema using Data Pump",
         "description": "Migrate an on-prem application schema using Data Pump",
         "publisheddate": "4/20/2020",
@@ -158,73 +116,109 @@
         "filename": "DBVault.md"
       },
       {
-        "title": "Lab 12: Key Management using Oracle Key Vault",
-        "description": "Key Management using Oracle Key Vault",
-        "publisheddate": "4/20/2020",
-        "filename": "KeyVault.md"
-      },
-      {
-        "title": "Lab 13: Data Safe Advanced lab",
+        "title": "Lab 12: Data Safe Advanced lab",
         "description": "Data Safe Advanced lab",
         "publisheddate": "4/20/2020",
-        "filename": "DataSafePE.md"
+        "filename": "DataSafeAdvanced.md"
       },
       {
-        "title": "Lab 14: Use OCI CLI commands to work with EXACS",
+        "title": "Lab 12-1: Discover and Mask Sensitive Data by Using Default Masking Formats in Oracle Data Safe",
+        "description": "Discover and Mask Sensitive Data by Using Default Masking Formats in Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeDM.md"
+      },
+      {
+        "title": "Lab 12-2: Explore Data Masking Results and Reports in Oracle Data Safe",
+        "description": "Explore Data Masking Results and Reports in Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeDM2.md"
+      },
+      {
+        "title": "Lab 12-3: Create a Masking Format in Oracle Data Safe",
+        "description": "Create a Masking Format in Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeDM3.md"
+      },
+      {
+        "title": "Lab 12-4: Configure a Variety of Masking Formats with Oracle Data Safe",
+        "description": "Configure a Variety of Masking Formats with Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeDM4.md"
+      },
+      {
+        "title": "Lab 12-5: Provision Audit and Alert Policies and Configure an Audit Trail in Oracle Data Safe",
+        "description": "Provision Audit and Alert Policies and Configure an Audit Trail in Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeAudit.md"
+      },
+      {
+        "title": "Lab 12-6: Analyze Audit Data with Reports and Alerts in Oracle Data Safe",
+        "description": "Analyze Audit Data with Reports and Alerts in Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeAudit2.md"
+      },
+      {
+        "title": "Lab 12-7: Create and Provision a Custom Audit Policy and View Audit Data in Oracle Data Safe",
+        "description": "Create and Provision a Custom Audit Policy and View Audit Data in Oracle Data Safe",
+        "publisheddate": "4/20/2020",
+        "filename": "DataSafeAudit3.md"
+      },
+      {
+        "title": "Lab 13: Use OCI CLI commands to work with EXACS",
         "description": "Use OCI CLI commands to work with EXACS",
         "publisheddate": "4/20/2020",
         "filename": "OCI-CLI.md"
       },
       {
-        "title": "Lab 15: Automation with Terraform",
+        "title": "Lab 14: Automation with Terraform",
         "description": "Automation with Terraform",
         "publisheddate": "4/20/2020",
         "filename": "Terraform.md"
       },
       {
-        "title": "Lab 15-1: Git for Beginner",
+        "title": "Lab 14-1: Git for Beginner",
         "description": "Git for Beginner",
         "publisheddate": "4/20/2020",
         "filename": "gitBeginner.md"
       },      
       {
-        "title": "Lab 15-2: Terraform for Beginner",
+        "title": "Lab 14-2: Terraform for Beginner",
         "description": "Terraform for Beginner",
         "publisheddate": "4/20/2020",
         "filename": "tfBeginner.md"
       },
       {
-        "title": "Lab 15-3: Terraform for database",
+        "title": "Lab 14-3: Terraform for database",
         "description": "Terraform for database",
         "publisheddate": "4/20/2020",
         "filename": "tf4Db.md"
       },
       {
-        "title": "Lab 16: Build and deploy Python application stacks on EXACS",
+        "title": "Lab 15: Build and deploy Python application stacks on EXACS",
         "description": "Build and deploy Python application stacks on EXACS",
         "publisheddate": "4/20/2020",
         "filename": "BuildPythonApps.md"
       },
       {
-        "title": "Lab 17: Introduction to Oracle APEX and ORDS",
+        "title": "Lab 16: Introduction to Oracle APEX and ORDS",
         "description": "Introduction to Oracle APEX and ORDS",
         "publisheddate": "4/20/2020",
         "filename": "APEX.md"
       },
       {
-        "title": "Lab 17-1: Install ORDS and APEX",
+        "title": "Lab 16-1: Install ORDS and APEX",
         "description": "Install ORDS and APEX",
         "publisheddate": "4/20/2020",
         "filename": "SetupORDSandAPEXonDBCS.md"
       },
       {
-        "title": "Lab 17-2: Create a RestService on Database",
+        "title": "Lab 16-2: Create a RestService on Database",
         "description": "Create a RestService on Database",
         "publisheddate": "4/20/2020",
         "filename": "Create_a_RestService_on_DBCS.md"
       },
       {
-        "title": "Lab 17-3: Build APEX application on EXACS",
+        "title": "Lab 16-3: Build APEX application on EXACS",
         "description": "Build APEX application on EXACS",
         "publisheddate": "4/20/2020",
         "filename": "Creating_an_Apex_Application.md"
@@ -234,6 +228,18 @@
         "description": "Appendix",
         "publisheddate": "4/20/2020",
         "filename": "Appendix.md"
+      },
+      {
+        "title": "Lab 17: Introduction to Swingbench and Oracle database",
+        "description": "Introduction to Swingbench and Oracle database",
+        "publisheddate": "5/18/2020",
+        "filename": "Swingbench.md"
+      },
+      {
+        "title": "Lab 18: Docker Application with EXACS",
+        "description": "Docker Application with EXACS",
+        "publisheddate": "5/18/2020",
+        "filename": "dockerapp.md"
       }
     ]
 }

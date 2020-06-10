@@ -30,7 +30,7 @@ these lab exercises.
 
 ## Create a VBCS Instance
 
-As part of the lab, we expect learns to create the VBCS instance before the session delivery.
+As part of the lab, we expect learners to create the VBCS instance before the session delivery.
 If you are creating a new instance either for the lab purposes or a customer demonstration, please follow the next steps; the process is simple but require several minutes to complete.
 
 In this lab you will make sure you can access the VBCS instance for your classroom and supporting lab files.
@@ -116,7 +116,7 @@ If you are creating a new instance either for the lab purposes or a customer dem
 1. Once in the main dashboard, open the **General Menu** located at the top left hand side of the screen and click on **Digital Assitant**
 <br>![](./media/creating_oda_1.png)
 
-1. In the Digital Assistant console, select the compartment where to deploy the new instance and click on **Create Digital Assistant Database**
+1. In the Digital Assistant console, select the compartment where to deploy the new instance and click on **Create Digital Assistant**
 <br>![](./media/creating_oda2.png)
 
 1. In the Digital Assistant creation screen, provide a name, description, and shape (For the lab purposes select `Production`), and click **Create**
@@ -130,4 +130,4 @@ That’s it, you’ve created your first Oracle Digital Assistant instance.
 
 ## Hands-On Labs
 
-Labs Documentation URLs to be delivered during the Live Session.
+You can access the Labs using the navigation bar located on the top-right hand corner.

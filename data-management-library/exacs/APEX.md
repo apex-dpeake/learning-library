@@ -9,7 +9,7 @@ Oracle Application Express (APEX) is a low-code development platform that enable
 
 Low Code Development
 
-With Oracle APEX and low code, your organization can be more agile - develop solutions faster, for less cost, and with greater consistency. You can adapt to changing requirements with ease. Empower professional developers and everyone else in your organization to be a part of the solution.
+With Oracle APEX and low code, your organization can be more agile - by developing solutions faster, for less cost, and with greater consistency. You can adapt to changing requirements with ease. Empower professional developers and everyone else in your organization to be a part of the solution.
 
 **For more information, refer to the [APEX Documentation](https://apex.oracle.com/en/platform/low-code/)
 
@@ -17,39 +17,43 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 
 ## Objectives
 
-- Setup Oracle REST Data Services(ORDS) and Application Express (APEX) for Exadata cloud service database.
+- Set up Oracle REST Data Services(ORDS) and Application Express (APEX) for the Exadata cloud service database.
 - Create a REST Service using APEX and deploy it using ORDS.
 - Load JSON data using the REST Service into the database
 - Load data into the database using the Python SDK.
 - Demonstrate native JSON support in Oracle Database.
-- Create an web application using APEX on Oracle Database.
+- Create a web application using APEX on Oracle Database.
 
 
 ## Required Artifacts
 
 - An Oracle Cloud Infrastructure account
 
-- A pre-provisioned instance of Oracle Developer Client image in an application subnet. Refer to [Lab 4](?lab=lab-4-configure-development-system-for-use)
+- A pre-provisioned instance of Oracle Developer Client image in an application subnet. Refer to **Lab 4**
 
-- A pre-provisioned Exadata Cloud Service Database instance. Refer to [Lab 3](?lab=lab-3-provision-databases-on-exadata-cloud)
+- A pre-provisioned Exadata Cloud Service Database instance. Refer to **Lab 3**
 
 **You are all set, let's begin!**
 
 ## Steps
 
-### **STEP 1: Setup ORDS and APEX on Oracle Database**
+### **STEP 1: Set up ORDS and APEX on Oracle Database**
 
 **Key Objectives**:
 
-- Learn how to setup ORDS and APEX on Oracle Database using Terraform [Lab 17-1](?lab=lab-17-1-install-ords-apex)
+- Learn how to setup ORDS and APEX on Oracle Database using Terraform
+
+**Click on Lab 16-1 from the menu on the right.**
 
 ### **STEP 2: Create a REST Service using APEX**
 
 **Key Objectives**:
 
-- Learn how to create a REST Service using APEX [Lab 17-2](?lab=lab-17-2-create-restservice-on-database)
+- Learn how to create a REST Service using APEX
 
-### **STEP 3: Integrating the REST Service in Python Application and Create a Web Application using APEX with Oracle Database.**
+**Click on Lab 16-2 from the menu on the right.**
+
+### **STEP 3: Integrating the REST Service in an Python Application and Create a Web Application using APEX with Oracle Database.**
 
 **Key Objectives**:
 
@@ -58,6 +62,7 @@ To **log issues**, click [here](https://github.com/oracle/learning-library/issue
 - Load data into the database
 - Learn how to Load data into Oracle Database using the Application through the Python SDK.
 - Create an Application in APEX using the loaded data.
-- Demonstrate native JSON support in oracle database.
+- Demonstrate native JSON support in an oracle database.
 
-_ Learn how to integrate REST service [Lab 17-3](?lab=lab-17-3-build-apex-application-on-exacs)
+
+**Click on Lab 16-3 from the menu on the right.**

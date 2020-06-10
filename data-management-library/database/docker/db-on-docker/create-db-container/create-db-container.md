@@ -25,6 +25,12 @@ You will use various Docker commands to setup, run and connect into containers. 
 
 ## Step 1: Create an Oracle Database Container
 
+0. Login to the instance using ssh
+
+    ````
+    ssh -i yourkeyname opc@ your ip address
+    ````
+
 1.  Verify your docker version
 
     ````

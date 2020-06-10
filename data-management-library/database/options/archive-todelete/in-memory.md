@@ -20,7 +20,7 @@ In the previous lab, you imported a 5 table star schema, ssb, into your compute 
 
 ## Required Artifacts
 - Each participant has been provided a username and password to the c4u03 tenancy
-- Each participant has completed the [Environment Setup](environment-setup-c4u03.md) lab or the SSWorkshop lab successfully and imported the SSB schema
+- Each participant has completed the [Environment Setup](environment-setup-c4u03.md) lab or the LiveLabs lab successfully and imported the SSB schema
 
 ## **STEP 1-Logging In and Enabling In-Memory**
 1.  Open up a web browser and log back into the Oracle Cloud.  Navigate to **Compute**->**Instances**.  Find your instance and click the **Start** button to start it up.
